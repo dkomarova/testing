@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161006 10:19:47.501" generator="Robot 2.8.6 (Python 2.7.12 on win32)">
+<suite source="C:\Users\kan4i\Desktop\MicebookingTests\test_cases\registration.txt" id="s1" name="Registration">
+<test id="s1-t1" name="Sucessful\Registration Message">
+<kw type="setup" name="Preconditions">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${NUMBER} = BuiltIn.Evaluate">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,1000)</arg>
+<arg>random</arg>
+</arguments>
+<msg timestamp="20161006 10:19:47.797" level="INFO">${NUMBER} = 109</msg>
+<status status="PASS" endtime="20161006 10:19:47.796" starttime="20161006 10:19:47.796"></status>
+</kw>
+<kw type="kw" name="mail_keywords.Mail Preconditions">
+<doc></doc>
+<arguments>
+<arg>scaletoolstest@gmail.com</arg>
+<arg>scaletoolstest123</arg>
+</arguments>
+<kw type="kw" name="ImapLibrary.Open Mailbox">
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<arguments>
+<arg>server=${IMAP_MAIL_SERVER}</arg>
+<arg>user=${mail_box}</arg>
+<arg>password=${password}</arg>
+<arg>is_secure=${True}</arg>
+</arguments>
+<status status="PASS" endtime="20161006 10:19:49.791" starttime="20161006 10:19:47.798"></status>
+</kw>
+<kw type="kw" name="ImapLibrary.Delete All Emails">
+<doc>Delete all emails.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20161006 10:19:50.016" starttime="20161006 10:19:49.792"></status>
+</kw>
+<kw type="kw" name="ImapLibrary.Close Mailbox">
+<doc>Close IMAP email client session.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20161006 10:19:50.187" starttime="20161006 10:19:50.016"></status>
+</kw>
+<status status="PASS" endtime="20161006 10:19:50.187" starttime="20161006 10:19:47.797"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Fail">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20161006 10:19:50.191" level="FAIL">AssertionError</msg>
+<status status="FAIL" endtime="20161006 10:19:50.192" starttime="20161006 10:19:50.188"></status>
+</kw>
+<status status="FAIL" endtime="20161006 10:19:50.192" starttime="20161006 10:19:47.795"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20161006 10:19:50.195" starttime="20161006 10:19:50.194"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20161006 10:19:50.196" critical="yes" starttime="20161006 10:19:47.794">Setup failed:
+AssertionError</status>
+</test>
+<doc>This file represents Registration on our web-site</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20161006 10:19:50.201" starttime="20161006 10:19:47.502"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="0" id="s1" name="Registration">Registration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

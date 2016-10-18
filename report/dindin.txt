@@ -1,0 +1,33 @@
+==============================================================================
+20161006 10:19:47.794 - INFO - + START SUITE: Registration [ ]
+==============================================================================
+20161006 10:19:47.795 - INFO - +- START TEST: Sucessful\Registration Message [ ]
+------------------------------------------------------------------------------
+20161006 10:19:47.795 - INFO - +-- START SETUP: Preconditions [ ]
+20161006 10:19:47.796 - INFO - +--- START KW: ${NUMBER} = BuiltIn.Evaluate [ random.randint(1,1000) | random ]
+20161006 10:19:47.797 - INFO - ${NUMBER} = 109
+20161006 10:19:47.797 - INFO - +--- END KW: ${NUMBER} = BuiltIn.Evaluate (0)
+20161006 10:19:47.797 - INFO - +--- START KW: mail_keywords.Mail Preconditions [ scaletoolstest@gmail.com | scaletoolstest123 ]
+20161006 10:19:47.798 - INFO - +---- START KW: ImapLibrary.Open Mailbox [ server=${IMAP_MAIL_SERVER} | user=${mail_box} | password=${password} | is_secure=${True} ]
+20161006 10:19:49.792 - INFO - +---- END KW: ImapLibrary.Open Mailbox (1993)
+20161006 10:19:49.793 - INFO - +---- START KW: ImapLibrary.Delete All Emails [ ]
+20161006 10:19:50.016 - INFO - +---- END KW: ImapLibrary.Delete All Emails (224)
+20161006 10:19:50.017 - INFO - +---- START KW: ImapLibrary.Close Mailbox [ ]
+20161006 10:19:50.187 - INFO - +---- END KW: ImapLibrary.Close Mailbox (171)
+20161006 10:19:50.187 - INFO - +--- END KW: mail_keywords.Mail Preconditions (2390)
+20161006 10:19:50.188 - INFO - +--- START KW: BuiltIn.Fail [ ]
+20161006 10:19:50.191 - FAIL - AssertionError
+20161006 10:19:50.192 - DEBUG - Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\robot\libraries\BuiltIn.py", line 443, in fail
+    raise AssertionError(msg) if msg else AssertionError()
+20161006 10:19:50.192 - INFO - +--- END KW: BuiltIn.Fail (4)
+20161006 10:19:50.193 - INFO - +-- END SETUP: Preconditions (2397)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:19:50.195 - INFO - +-- START TEARDOWN: Selenium2Library.Close All Browsers [ ]
+20161006 10:19:50.195 - DEBUG - Closing all browsers
+20161006 10:19:50.196 - INFO - +-- END TEARDOWN: Selenium2Library.Close All Browsers (1)
+------------------------------------------------------------------------------
+20161006 10:19:50.200 - INFO - +- END TEST: Sucessful\Registration Message (2402)
+------------------------------------------------------------------------------
+20161006 10:19:50.204 - INFO - + END SUITE: Registration (2699)
+==============================================================================
